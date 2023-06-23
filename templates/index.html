@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{%block title %} Home {%endblock title%}
+
+{%block body%}
+
+
+      
+    <section id="home" >
+        <div class="container">
+            <h1>ARTISTIC</h1>
+            <h2 id="quo">"Every artist dips his brush in his own soul and paints his own nature into his pictures." - Henry Ward Beecher</h2>
+        </div>
+    </section>
+
+    <section id="new" class="w-100">
+        <div class="row p-0 m-0">
+            <div class="one col-lg-4 col-md-12 col-12 p-0">
+                <img class="img-fluid" src="static/img/section1.avif" alt="">
+                <div class="details">
+                    <h2>Pen Sketching</h2>
+                </div>
+            </div>
+
+            <div class="one col-lg-4 col-md-12 col-12 p-0">
+                <img class="img-fluid" src="static/img/section2.avif" alt="">
+                <div class="details">
+                    <h2>Water Color Painting</h2>
+                </div>
+            </div>
+
+            <div class="one col-lg-4 col-md-12 col-12 p-0">
+                <img class="img-fluid" src="static/img/section3.avif" alt="">
+                <div class="details">
+                    <h2>Portraits</h2>
+                </div>
+            </div>
+        </div>
+
+        <section id="featured" class="my-5 pb-5">
+            <div class="container text-centre mt-5 py-5">
+                <h3 style="font-size: 2.5rem;">Featured Arts</h3>
+                <hr class="mx-auto">
+                <div class="text-center">
+                    <p>Here you can check out our new arts with fair prices on artistic</p>
+                </div>
+            </div>
+        
+            <div class="row mx-auto container-fluid">
+                {% for i in product|slice:"0::2" %}
+                {% if forloop.counter <= 8 %}
+                    <div class="product text-centre col-lg-3 col-md-4 col-6">
+                        <img class="img-fluid mb-3" src="{{ i.image.url }}" loading="lazy">
+
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+    
+{%endblock body%}

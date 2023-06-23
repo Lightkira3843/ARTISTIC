@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+<section id="featured" class="my-5 pb-5">
+    <div class="container text-center mt-5 py-5">
+        <h3 style="font-size: 2.5rem;">Art Gallery</h3>
+        <hr class="mx-auto">
+    </div>
+
+    <div class="row mx-auto container-fluid">
+        {% for i in product|slice:"::-1" %}
+        <div class="product text-center col-lg-3 col-md-4 col-6">
+            <img class="img-fluid mb-3" src="{{ i.image.url }}" loading="lazy">
+
+            <h4 class="p-price">₹{{i.price}}</h4>
+            <a href="/checkout/">
+                <button class="buy-btn">Buy Now</button>
+            </a>        
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+</section>
+
+{% endblock body %}
+
+

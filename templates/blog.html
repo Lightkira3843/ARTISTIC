@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #fffef2 ;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .paragraph{
+        font-family: serif;
+        font-size: 20px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 24px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+        <ul>
+            <li class="header"><a href="/">Home</a></li>
+            <li class="header"><a href="/artgal/">Art Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+  <header>
+    <h1 style="text-decoration: underline; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Welcome to Artistic's Blog</h1>
+  </header>
+
+  <main>
+    <h2 style="font-weight: 600; font-size: 30px;" >About Us</h2>
+    <p class="paragraph">The platform Artistic, is the ultimate destination for art enthusiasts and collectors! We are thrilled to present to you a unique online platform that celebrates the creativity and talent of artists from around the world.</p>
+    <p class="paragraph">At Artistic, we believe that art has the power to inspire, evoke emotions, and transform spaces. Our mission is to connect artists with art lovers, providing a convenient and immersive shopping experience that showcases a diverse range of artistic expressions.</p>
+    <p class="paragraph">
+        In addition to offering an extensive array of art, we also provide a secure and seamless purchasing process. Our platform prioritizes the trust and satisfaction of our customers, with secure payment options
+    </p>
+    <p class="paragraph">We take great pride in nurturing a vibrant community of artists and art enthusiasts. Our blog and social media channels are dedicated to providing insightful articles, interviews, and behind-the-scenes glimpses into the artistic world. </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My Blog. All rights reserved.</p>
+  </footer>
+</body>
+</html>
